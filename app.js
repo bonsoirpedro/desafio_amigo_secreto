@@ -34,6 +34,9 @@ function sortearAmigo() {
         return;
     }
     let amigoSorteado = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
+    let amigoSorteadoIndice = listaAmigos.indexOf(amigoSorteado);
+    listaAmigos.splice(amigoSorteadoIndice, 1);
     let mensagem = document.querySelector('ul');
     mensagem.textContent = `O amigo sorteado foi: ${amigoSorteado}!!!`;
+    mensagem.style.color = 'green';
 }
